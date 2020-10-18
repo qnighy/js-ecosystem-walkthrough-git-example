@@ -20,4 +20,4 @@ if (!logFile.startsWith("/")) {
   console.error(`SCRIPT_LOG_FILE must be an absolute path; got ${logFile}`);
   process.exit(1);
 }
-fs.promises.writeFile(logFile, msg + "\n", { flag: "a" });
+fs.writeFileSync(logFile, msg + "\n", { flag: "a" });
